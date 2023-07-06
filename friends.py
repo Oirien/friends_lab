@@ -127,7 +127,12 @@ print(person1["monies"],person2["monies"])
 # 8. Define a function called all_favourite_foods(people) that returns a list of everyone's favourite food.
 # INPUT: people
 # OUTPUT: ["charcuterie", "soup", "bread", "Scooby snacks", "spaghetti", "ratatouille", "spinach"]
-
+def all_favourite_foods(people):
+    favourite_foods=[]
+    for foods in people:
+        favourite_foods.extend(foods["favourites"]["snacks"])
+    return favourite_foods
+print(all_favourite_foods(people))
 
 # 9. Define a function called find_no_friends(people) that returns a list of all the people that have a friends list of length 0.
 # INPUT: people
