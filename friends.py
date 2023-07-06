@@ -148,6 +148,12 @@ print(find_no_friends(people))
 # 10. Define a function called unique_favourite_tv_shows(people) that returns a list of all the tv_shows (without duplicates).
 # INPUT: people
 # OUTPUT: ['Friends', 'Baywatch', 'Pokemon', 'X-Files']
-
+def unique_favourite_tv_shows(people):
+    tv_shows=[]
+    for shows in people:
+        tv_shows.append(shows["favourites"]["tv_show"])
+    unique_shows=list(dict.fromkeys(tv_shows))
+    return unique_shows
+print(unique_favourite_tv_shows(people))
 
 # BONUS: Try to refactor the previous function to use Python's built-in set() function.
