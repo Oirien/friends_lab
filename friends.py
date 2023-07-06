@@ -137,7 +137,13 @@ print(all_favourite_foods(people))
 # 9. Define a function called find_no_friends(people) that returns a list of all the people that have a friends list of length 0.
 # INPUT: people
 # OUTPUT: [{'name': 'Daphne', 'age': 20, 'monies': 100, 'friends': [], 'favourites': {'tv_show': 'X-Files', 'snacks': ['spinach']}}]
-
+def find_no_friends(people):
+    billy_no_mates=[]
+    for friends in people:
+        if len(friends["friends"])==0:
+            billy_no_mates.append(friends)
+    return billy_no_mates
+print(find_no_friends(people))
 
 # 10. Define a function called unique_favourite_tv_shows(people) that returns a list of all the tv_shows (without duplicates).
 # INPUT: people
