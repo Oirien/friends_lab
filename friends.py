@@ -64,12 +64,16 @@ people = [person1, person2, person3, person4, person5]
 # 1. Define a function called get_name(person) that returns the given person's name
 # INPUT: person5
 # OUTPUT: "Daphne"
-
+def get_name(person):
+    return person["name"]
+print(get_name(person5))
 
 # 2. Define a function called get_favourite_tv_show(person) that returns the given person's favourite TV show
 # INPUT: person2
 # OUTPUT: "Baywatch"
-
+def get_favourite_tv_show(person):
+    return person["favourites"]["tv_show"]
+print(get_favourite_tv_show(person2))
 
 # 3. Define a function called likes_to_eat(person, food) that returns True or False
 # INPUT: person2, "bread"
@@ -77,7 +81,10 @@ people = [person1, person2, person3, person4, person5]
 #
 # INPUT: person3, "spinach"
 # OUTPUT: False
-
+def likes_to_eat(person,food):
+    return food in person["favourites"]["snacks"]
+print(likes_to_eat(person2,"bread"))
+print(likes_to_eat(person3,"spinach"))
 
 # 4. Define a function called add_friend(person, new_friend) that appends a new friend to the person's list of friends
 # INPUT: person2, "Scrappy-Doo"
