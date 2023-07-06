@@ -157,3 +157,10 @@ def unique_favourite_tv_shows(people):
 print(unique_favourite_tv_shows(people))
 
 # BONUS: Try to refactor the previous function to use Python's built-in set() function.
+def unique_favourite_tv_shows(people):
+    tv_shows=[]
+    for shows in people:
+        tv_shows.append(shows["favourites"]["tv_show"])
+    unique_shows=list(set(tv_shows))
+    return unique_shows
+print(unique_favourite_tv_shows(people))
