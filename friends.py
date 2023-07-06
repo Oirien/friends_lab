@@ -118,7 +118,11 @@ print(total_money(people))
 # INPUT: person2, person1, 2
 # OUTPUT: None
 # Test your function by calling it and then printing out person1's and person2's monies
-
+def lend_money(lender,borrower,amount):
+    lender["monies"]-=amount
+    borrower["monies"]+=amount
+lend_money(person2,person1,2)
+print(person1["monies"],person2["monies"])
 
 # 8. Define a function called all_favourite_foods(people) that returns a list of everyone's favourite food.
 # INPUT: people
